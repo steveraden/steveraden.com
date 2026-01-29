@@ -1,0 +1,31 @@
+# https://aicarma.com/blog/robots-txt-for-ai/#copy-paste-robotstxt-templates
+# Publisher Protection Configuration
+# Blocks training but allows live search visibility
+
+User-agent: *
+Allow: /
+Disallow: /subscriber/
+Disallow: /premium/
+Disallow: /archive/
+
+# Block training, allow live browsing
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /subscriber/
+Disallow: /premium/
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Block Common Crawl (training data source)
+User-agent: CCBot
+Disallow: /

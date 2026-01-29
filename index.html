@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   
+
     <style>
-        nav.bg-blue-smoke {
+        .bg-blue-smoke {
             background-color: #6083ad;
+        }
+
+        .card {
+            background: #AD8A60;
+            background: linear-gradient(180deg, rgba(173, 138, 96, 1) 0%, rgba(255, 255, 255, 1) 22%);
         }
 
         img {
@@ -18,130 +23,99 @@
 </head>
 
 <body class="bg-white-200">
-    <nav class="bg-blue-smoke w-full z-20 top-0 start-0 border-default">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Steve Raden</span>
-            </a>
-            <button data-collapse-toggle="navbar-dropdown" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
-                aria-controls="navbar-dropdown" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-                <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
-                    <li>
-                        <a href="https://github.com/steveraden/"
-                            class="block py-2 px-3 text-heading rounded hover:bg-blue/5" aria-current="page">Github
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/steveraden/"
-                            class="block py-2 px-3  rounded hover:text-lime">Linkedin</a>
-                    </li>
-                    <li>
-                </ul>
+    <nav class="bg-blue-smoke p-2">
+        <div class="container mx-auto flex items-center justify-between py-4">
+            <h1 class="text-2xl font-bold text-gray-50">Steve Raden</h1>
+            <div class="flex space-x-10">
+                <div class="flex items-center space-x-2">
+                    <a href="https://github.com/steveraden/" class="text-gray-50" aria-current="page">Github</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <a href="https://www.linkedin.com/in/steveraden/" class="text-gray-50">Linkedin</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <a class="text-gray-50" place-self-center" href="mailto:steve@steveraden.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-
     </nav>
-    <header class="container mx-auto  grid grid-cols-1 md:grid-cols-3 md:p-20 mb-10">
-        <p class="md:place-self-center text-xl mb-5">
+
+    <header class="container m-auto  grid grid-cols-1 lg:grid-cols-3 p-10 gap-10 lg:p-20">
+        <p class="place-self-center text-xl mb-5">
             Hello, I'm Steve Raden
         </p>
-        <img class="md:justify-items-start p-5" src="./steves_face.jpg" alt="Steve Raden's face" width="320" height="320"
+        <img class="place-self-center p-5" src="./steves_face.jpg" alt="Steve Raden's face" width="320" height="320"
             border="5" />
-        <div class="md:place-self-center mt-20">
-            <p>I am a software developer and consultant and can help your organization envision and develop applications and data systems. I bring experience in</p>
+        <div class="place-self-center">
+            <p>I am a software developer and consultant and can help your organization envision and develop applications
+                and data systems. I bring experience in</p>
             <ul class="list-disc">
-                <li class="ml-10""><a class=" hover:bg-gray-400" href=" #consulting">enterprise consulting</a></li>
-                <li class="ml-10""><a href=" #non-profit">non-profit organizations</a></li>
+                <li class="ml-10"><a href="#consulting">enterprise consulting</a></li>
+                <li class="ml-10"><a href="#non-profit">non-profit organizations</a></li>
                 <li class="ml-10"><a href="#software-dev">software development</a></li>
                 <li class="ml-10"><a href="#software-dev">data engineering</a></li>
-                <li class="ml-10"><a href="#sysadmin"></a>systems administrations & operations</a></li>
-                <li class="ml-10"><a href=" #design">architecting & systems design</a></li>
+                <li class="ml-10"><a href="#sysadmin"></a>systems administrations &
+                    operations</a></li>
+                <li class="ml-10"><a class="hover:bg-gray-9400" href="#design">architecting & systems design</a></li>
             </ul>
         </div>
     </header>
     <main class="relative">
-        <div class="mx-auto container grid grid-cols-1 md:grid-cols-3">
-            <div id="consulting" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20">
+        <div class="mx-auto container grid grid-cols-1 gap-5  md:grid-cols-3">
+            <div id="consulting" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20 card">
                 <div class="px-6 py-4">
                     <div class="font-bold text-l mb-2">enterprise consulting</div>
                     <p class="pt-4 pb-2 text-base">
-                        Consulting has grounded me in the habit of considering the strategy or "Why?" of
-                        what an project or task means to the organization no matter how technical that action may be.
-                        It's also been invaluable to have exposed to the different problem solving styles of
-                        contributors and workers, managers and leaders.
+                        Consulting has grounded me in the habit of evaluating any proposed project or task against a variety of factors which can include technical debt, strategic and tactical relevance, and available resources. It's also exposed me to the different problem solving styles of contributors and workers, managers and leaders.
                     </p>
                 </div>
             </div>
-            <div id="non-profit" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20"">
+            <div id="non-profit" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20 card">
                 <div class=" px-6 py-4">
-                <div class="font-bold text-l mb-2">non-profit organizations</div>
-                <p class="pt-4 pb-2">
-                    Especially challenging and rewarding is the work I've done for non-profit and grassroots
-                    organizations both in the USA and abroad. Having far fewer resources than for-profit
-                    enterprises really motivates an organization to be selective and judicious in their
-                    technology choices. Consulting in this context can often involving empowering an
-                    organization through knowledge transfer of emerging techniques and trends from the business
-                    sector.
-                </p>
+                    <div class="font-bold text-l mb-2">non-profit organizations</div>
+                    <p class="pt-4 pb-2">
+                        The work I've done for non-profit and grassroots organizations both in the USA and abroad has been especially challenging and rewarding.  The relative scarcity of resources that most non-profits face can cause an organization to be very selective in their technology choices. Consulting in this context often involves knowledge transfer of emerging technical trends from the business sector, and helping an the organization leverage these in a realistic and cost-effective way.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div id="software-dev" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20"">
+            <div id="software-dev" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20 card">
                 <div class=" px-6 py-4">
-            <div class="font-bold text-l mb-2">software development</div>
-            <p class="pt-4 pb-2 text-base">
-                I'm a senior developer whose worked on Python, Ruby on Rails and Node.JS SaaS projects and
-                companies.
-                In the past, I've been worked on some large .NET and Java code-bases, and also content
-                management system hosted development such as Wordpress and Drupal.
-                Though I've worked on the full stack, and pure front-end, the focus of my work has been on
-                database programming, and SQL is my strongest language.
-            </p>
-        </div>
-        </div>
-        <div id="data-eng" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20"">
-                <div class=" px-6 py-4">
-            <div class="font-bold text-l mb-2">data engineering</div>
-            <p class="pt-4 pb-2">
-                My entry into the computer systems field was relational database technology. Many roles brought
-                me adjacent to data services, analytics and database administration teams often because I was
-                maintaining a data integration workflow which was non-performant and needed re-design around
-                data engineering techniques. I'm training now on modern data engineering tool-sets such as
-                Airflow, dbt and Google Cloud Platform Big Query.
-            </p>
-        </div>
-        </div>
-        <div id="sysadmin" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20">
-            <div class="px-6 py-4">
-                <div class="font-bold text-l mb-2">systems administration</div>
-                <p class="pt-4 pb-2">
-                    I've acted as web master for several non-profit organizations, and then went on to build out
-                    infrastructure on Amazon Web Services for several clients. Being able to translate between
-                    engineers and other staff is key during a crisis, your learn a lot keeping the lights on a
-                    system! However, the system's environment should really try to minimize heroism.
-                </p>
+                    <div class="font-bold text-l mb-2">software development</div>
+                    <p class="pt-4 pb-2 text-base">
+                        I'm a senior developer whose worked on Python, Ruby on Rails and Node.JS SaaS projects and companies. I've also worked on some large .NET, PHP and Java code-bases.  The focus of my work has been on database programming, but I've worked up and down the application stack.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div id="design" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20"">
+            <div id="data-eng" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20 card">
                 <div class=" px-6 py-4">
-            <div class="font-bold text-l mb-2">architecting and systems design</div>
-            <p class="pt-4 pb-2 text-base">
-                I enjoy listening about what an organization does and translating that into feature
-                specifications and database design. I also like understanding the general ecology of
-                organization's applications and technical infrastructure. And also how all that interacts with
-                the ecology of the organization itself; the appropriateness and sustainability of technology
-                choices is a really important consideration.
-            </p>
-        </div>
-        </div>
+                    <div class="font-bold text-l mb-2">data engineering</div>
+                    <p class="pt-4 pb-2">
+                        My entry into the computer systems field was relational database technology. Many roles brought me adjacent to data services, analytics and database administration teams often because I was maintaining a data integration workflow which was non-performant and needed re-design around data engineering techniques. I'm training now on modern data engineering tool-sets such as Airflow, dbt and Google Cloud Platform Big Query.
+                    </p>
+                </div>
+            </div>
+            <div id="sysadmin" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20 card">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-l mb-2">systems administration</div>
+                    <p class="pt-4 pb-2">
+                        I've been a web master for several non-profit organizations, and then went on to build out infrastructure on Amazon Web Services for several clients. Being able to translate between engineers and other staff is key during a crisis, and you learn a lot keeping the lights on a system! However, the system's environment should really try to minimize heroism.
+                    </p>
+                </div>
+            </div>
+            <div id="design" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-20 card">
+                <div class=" px-6 py-4">
+                    <div class="font-bold text-l mb-2">architecting and systems design</div>
+                    <p class="pt-4 pb-2 text-base">
+                        I enjoy listening to what an organization does and translating that into feature specifications and database design. I also like understanding the general ecology of organization's applications and technical infrastructure. And also how all that interacts with the ecology of the organization itself; the appropriateness and sustainability of technology choices is a really important consideration.
+                    </p>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="flex mt-5">
